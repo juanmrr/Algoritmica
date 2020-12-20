@@ -1,0 +1,13 @@
+#!/bin/bash
+inicio=1
+fin=12
+incremento=1
+i=$inicio
+
+echo > tiempos.dat
+
+while [ $i -le $fin ]; do
+  echo Ejecucion tam=$i
+  echo `./permutacionPeor $i 10000` >> tiempos.dat
+  let "i += $incremento"
+done

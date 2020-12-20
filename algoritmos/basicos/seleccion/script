@@ -1,0 +1,11 @@
+#!/bin/bash
+inicio=100
+fin=10000
+incremento=100
+i=$inicio
+echo > tiempos.dat
+while [ $i -le $fin ]; do
+  echo Ejecución tam=$i
+  echo `./seleccionPeor $i 10000` >> tiempos.dat
+  let "i += $incremento"
+done

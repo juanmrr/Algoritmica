@@ -1,0 +1,23 @@
+void burbuja(int *v, int nelem) {
+  int swap;
+
+  for (int i=0; i < nelem-1; i++){
+    for (int j=0; j < nelem-i; j++) {
+      if (v[j] > v[j+1]) {
+	swap = v[j];	
+	v[j] = v[j+1];	
+	v[j+1] = swap;	
+      }  
+    }
+  }
+}
+
+Partiendo del siguiente código para el algoritmo de inserción realizamos los análisis en el mejor, peor y caso promedio:
+
+RELLENAR EN PDF
+
+- Caso peor
+	f(n)=a*n*n + b*n + c
+	a               = 3.43834e-09 
+	b               = -3.31474e-06
+	c               = 0.00401923 

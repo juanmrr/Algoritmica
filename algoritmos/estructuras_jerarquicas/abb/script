@@ -1,0 +1,13 @@
+#!/bin/bash
+inicio=500
+fin=50000
+incremento=1000
+i=$inicio
+
+echo > tiempos2.dat
+
+while [ $i -le $fin ]; do
+  echo Ejecucion tam=$i
+  echo `./abbPromedioYPeor $i 10000` >> tiempos2.dat
+  let "i += $incremento"
+done

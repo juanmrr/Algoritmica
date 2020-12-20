@@ -1,0 +1,8 @@
+Caso Promedio:
+
+Procesador: Intel(R) Core(TM) i5-2430M
+Velocidad de reloj: 2.40GHz
+Memoria RAM: 6GB
+
+Sistema Operativo: Lubuntu 17.04
+Compilación: g++ -o burbuja burbuja.cpp -std=c++11

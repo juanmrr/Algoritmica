@@ -1,0 +1,27 @@
+void insercion(int *v, int nelem) {
+  int swap, valor, j;
+  bool fin;
+
+  for (int i=1; i < nelem; i++) {
+    valor = v[i];
+    j = i;
+
+    while (valor < v[j-1] && j>0) {
+      swap = v[j-1];
+      v[j-1] = v[j];
+      v[j] = swap;
+
+      j--;
+    }
+  }
+}
+
+Partiendo del siguiente código para el algoritmo de inserción realizamos los análisis en el mejor, peor y caso promedio:
+
+RELLENAR EN PDF
+
+- Caso peor
+  Ajuste de f(x)=a*(x^2) + b*x + c
+	a               = 1.28756e-09      
+	b               = 6.41874e-07    
+	c               = 0.0012578   

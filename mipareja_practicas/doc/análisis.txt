@@ -1,0 +1,9 @@
+Gráficas realizadas en base a la ejecución de alumnos_small.txt
+
+Tipo			Nodos		Porcentaje		Tiempo
+Backtracking sin poda	78		3.9877300613		0.000508507
+Backtracking con poda	43		2.1983640082		0.000404286
+Branch & Bound		8		0.408997955		0.00158767
+
+Se aprecia claramente que Branch&Bound explora la menor proporción del árbol, pero a costa de un tiempo computacional debido a las cotas.
+Aún así, se espera que para tamaños mayores sea más eficiente utilizar esta opción.

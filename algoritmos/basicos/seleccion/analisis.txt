@@ -1,0 +1,21 @@
+void seleccion (int *v, int n) 
+{
+	int min,i,j,aux;
+        for (i=0; i<n-1; i++) 
+        {
+              min=i;
+              for(j=i+1; j<n; j++)
+                    if(v[min] > v[j])
+                       min=j;
+              aux=v[min];
+              v[min]=v[i];
+              v[i]=aux ;
+        }
+ 
+}
+
+Partiendo del siguiente código para el algoritmo de inserción realizamos los análisis en el mejor, peor y caso promedio:
+
+RELLENAR EN PDF
+
+- Caso peor

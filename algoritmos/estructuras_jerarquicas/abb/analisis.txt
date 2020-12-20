@@ -1,0 +1,49 @@
+void ordenarConABB(int *v, int nelem) {
+	ABB<int>arbol;
+	ABB<int>::nodo n;
+	int i;
+
+	for (i = 0; i < nelem; i++) {
+		arbol.Insertar(v[i]);
+	}
+
+
+	for (n = arbol.begin(), i = 0; n != arbol.end(); ++n, i++){
+		v[i] = *n;
+	}
+}
+
+
+template <class T>
+bool ABB<T>::Insertar(ABB<T>::info_nodo * &n,const T & e){
+	  
+	  bool res =false;
+	  if (n==0){
+	    n = new info_nodo(e);
+	    return true;
+	  }
+	  else if (n->et<e){
+		    res =Insertar(n->hder,e);
+		    if (res){
+			n->hder->padre=n;
+		    }
+		    return res;	      
+	  }
+	  else if (n->et>e){
+		    res =Insertar(n->hizq,e);
+		    if (res){
+			n->hizq->padre=n;
+		    }
+		    return res;
+	  }
+	  return false;
+}
+
+Partiendo del siguiente código para el algoritmo de inserción realizamos los análisis en el mejor, peor y caso promedio:
+
+RELLENAR EN PDF
+
+- Caso peor: 
+	f(x) = a*n*log(n)
+	a	1.70442e-08
+
